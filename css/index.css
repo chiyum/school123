@@ -1,16 +1,15 @@
 #home .header{
     text-align: center;
-    background-color: green;
 }
 
 #home .header a{
     font-size: 14px;
     border: #f3f3f3 1px solid;
-    background-color: grey;
 }
 
 #home .content{
     color: green;
+    margin-top: 15%;
 }
 
 #home .footer{
@@ -25,11 +24,11 @@
 #product .header a{
     font-size: 14px;
     border: #f3f3f3 1px solid;
-    background-color: grey;
 }
 
 #product .content{
     color: green;
+    margin-top: 15%;
 }
 
 #product .content img{
@@ -40,3 +39,6 @@
     font-size: 14px;
 }
 
+#about div{
+    text-align: center;
+}
