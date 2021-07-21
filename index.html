@@ -5,8 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
-    20號黃勝弘
+    <div data-role="page" id="home">
+        <div data-role="header" data-theme="b" class="header">
+            <p>旅遊資訊網</p>
+            <a href="#product">第二頁</a>
+        </div>
+        <div data-role="content" class="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum amet, a alias dolor dolorem et, id velit mollitia eos commodi deleniti impedit perspiciatis, architecto suscipit quod minus odio incidunt omnis!
+            </p>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b" class="footer">
+            <p>地址:幸福區幸福路3號</p>
+            <p>連絡電話:02-2223333</p>
+        </div>
+    </div>
+    <!-- 第二頁 -->
+    <div data-role="page" id="product" class="header">
+        <div data-role="header" class="header" data-theme="b">
+            <p>旅遊資訊網</p>
+            <a href="#home">首頁</a>
+        </div>
+        <div data-role="content" class="content">
+            <a href="#">安安你好</a>
+        </div>
+        <div data-role="footer" data-position="fixed" class="footer" data-theme="b">
+            <p>地址:幸福區幸福路3號</p>
+            <p>連絡電話:02-2223333</p>
+        </div>
+    </div>
 </body>
 </html>
