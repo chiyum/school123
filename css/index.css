@@ -1,5 +1,6 @@
 #home .header{
     text-align: center;
+    background-color: green;
 }
 
 #home .header a{
@@ -29,12 +30,10 @@
 
 #product .content{
     color: green;
-    position: relative;
 }
 
-#product .content a{
-    position: absolute;
-    bottom: 100;
+#product .content img{
+    width: 49%;
 }
 
 #product .footer{
