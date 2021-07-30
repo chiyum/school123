@@ -10,15 +10,58 @@
     <script src="js/jquery-2.1.0.min.js"></script>
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
 </head>
+<!-- data-role ="page(分頁)/header(頁首)/main(頁中)/footer(頁尾)/button(按鈕)" -->
+
+<!-- data-rel ="back(回上頁)/dialog(彈跳視窗)/popup(彈跳視窗2)" -->
+<!-- popup用法
+點擊元素 data-rel="popup" href="#click(ID錨點)"
+彈出元素 data-role =popup id="click" -->
+
+<!-- data-ajax="false"或
+    rel="external"或
+    target="_blank"
+    連接至外部網站 -->
+
+<!-- data-position ="fixed" 定位頁首與頁尾-->
+
+<!-- data-theme="a"灰/"b" 黑 顏色改變-->
+
+<!-- data-fullscreen="true/false" 全螢幕顯示-->
+
+<!-- data-transition="flip/pop/fade/turn/flow/slide"等 換頁效果-->
+
+<!-- data-position-to="width"畫面固定在正中央 -->
 <body>
     <div data-role="page" id="home">
         <div data-role="header" data-theme="b" class="header" data-position="fixed" data-fullscreen="ture">
             <p>甜點店</p>
-            <a data-rel="back" data-theme="a">返回</a>
+            <a data-rel="back" data-theme="a">返回</a> 
+            <!-- A標籤放在headerORfooter的話會自動變按鈕 -->
         </div>
-        <div data-role="content" class="content">
+        <div data-role="main" class="content">
             <a href="#product" data-role="button" data-transition="flow">第二頁</a>
+            <a href="#phtoId" data-role="button" data-transition="flow">相簿</a>
             <a href="#about" data-rel="dialog" data-role="button">視窗</a>
+            <a href="#click" data-rel="popup" data-role="button">視窗二</a>
+                <div id="click" data-role="popup">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Natus, minima nobis error placeat eos sequi fugiat
+                        doloremque blanditiis sunt quia aperiam consectetur,
+                        repellat et cumque quas, labore voluptas tempora nulla!</p>
+                </div>
+            <a href="#img" data-rel="popup">
+                <img src="./img/960_logo.png" alt="img" style="width: 200px;">
+            </a>
+            <div data-role="popup" id="img" data-position-to="width">
+                <!-- data-position-to="width"畫面固定在正中央 -->
+                <a href="#" data-role="button" data-theme="b" data-icon="delete" data-iconpos="notext" class="ui-btn-center" data-rel="back"></a>
+                <!-- data-icon在元素上加上圖示 -->
+                <!-- data-iconpos="notext"去除文字 -->
+                <!-- data-sismissible="false"停止畫面上的功能 -->
+                <!-- class="ui-btn-right" 固定icon位置 -->
+                <img src="./img/960_logo.png" alt="img">
+                <h3>測試</h3>
+            </div>
         </div>
         <div data-role="footer" data-position="fixed" data-theme="b" class="footer">
             <p>地址:幸福區幸福路3號</p>
@@ -30,6 +73,7 @@
     </div>
     <!-- 第二頁 -->
     <div data-role="page" id="product" class="header">
+        <!-- 新增分頁加上data-role="page" -->
         <div data-role="header" class="header" data-theme="b" data-position="fixed" data-fullscreen="ture">
             <p>產品頁面</p>
             <a data-rel="back">返回</a>
@@ -42,7 +86,6 @@
             <img src="./img/pic1.png" alt="圖案">
             <img src="./img/pic2.png" alt="圖案">
             <img src="./img/pic3.png" alt="圖案">
-            
         </div>
         <div data-role="footer" data-position="fixed" class="footer" data-theme="b">
             <p>地址:幸福區幸福路3號</p>
@@ -52,17 +95,123 @@
             <a href="mailto:qcc870712@gmail.com" data-theme="a">mail聯絡</a>
         </div>
     </div>
-    <!-- 彈跳視窗 -->
+    <!-- 相簿 -->
+    <div data-role="page" id="phtoId">
+        <div data-role="header" style="text-align: center;padding: 10px;" data-theme="b">
+            相簿
+        </div>
+        <div data-role="main">
+            <a href="#img2" data-rel="popup" data-position-to="window">
+                <img src="./img/pic1.png" alt="img">
+            </a>
+            <div data-role="popup" id="img2" data-dismissible="false">
+                <a href="#" data-rel="back" data-icon="delete" data-role="button" data-iconpos="notext" class="ui-btn-right" data-theme="b"></a>
+                <!-- data-icon="delete" data-role="button"這兩個是相輔助的，缺一不可 -->
+                <!-- class="ui-btn-right"只有搭上這個class圖片才不會有空白 -->
+                <!-- data-iconpos="notext"讓視窗只有icon的圖示 -->
+                <img src="./img/pic1.png" alt="" style="width: 100%;">
+                <h3>img2</h3>
+                <p>這是img2</p>
+            </div>
+            <a href="#img3" data-rel="popup" data-position-to="window">
+            <img src="./img/pic2.png" alt="img">
+            </a>
+            <div data-role="popup" id="img3" data-dismissible="false">
+                <a href="#" data-rel="back" data-icon="delete" data-role="button" data-iconpos="notext" class="ui-btn-right" data-theme="b"></a>
+                <img src="./img/pic2.png" alt="" style="width: 100%;">
+                <h3>img3</h3>
+                <p>這是img3</p>
+            </div>
+            <a href="#img4" data-rel="popup" data-position-to="window">
+                <img src="./img/pic3.png" alt="img">
+                </a>
+                <div data-role="popup" id="img4" data-dismissible="false">
+                    <a href="#" data-rel="back" data-icon="delete" data-role="button" data-iconpos="notext" class="ui-btn-right" data-theme="b"></a>
+                    <img src="./img/pic3.png" alt="" style="width: 100%;">
+                    <h3>img4</h3>
+                    <p>這是img4</p>
+                </div>
+            <a href="#img5" data-rel="popup" data-position-to="window">
+                <img src="./img/pic1.png" alt="img">
+                </a>
+                <div data-role="popup" id="img5" data-dismissible="false">
+                    <a href="#" data-rel="back" data-icon="delete" data-role="button" data-iconpos="notext" class="ui-btn-right" data-theme="b"></a>
+                    <img src="https://icguanyu.github.io/sweetaste/img/item5.jpg" alt="" style="width: 100%;">
+                    <h3>img5</h3>
+                    <p>這是img5</p>
+                </div>
+            <a href="#img6" data-rel="popup" data-position-to="window">
+                <img src="./img/pic2.png" alt="img">
+                </a>
+                <div data-role="popup" id="img6" data-dismissible="false">
+                    <a href="#" data-rel="back" data-icon="delete" data-role="button" data-iconpos="notext" class="ui-btn-right" data-theme="b"></a>
+                    <img src="https://icguanyu.github.io/sweetaste/img/item4.jpg" alt="" style="width: 100%;">
+                    <h3>img6</h3>
+                    <p>這是img6</p>
+                </div>
+            <a href="#img7" data-rel="popup" data-position-to="window">
+                <img src="./img/pic3.png" alt="img">
+                </a>
+                <div data-role="popup" id="img7" data-dismissible="false">
+                    <a href="#" data-rel="back" data-icon="delete" data-role="button" data-iconpos="notext" class="ui-btn-right" data-theme="b"></a>
+                    <img src="https://icguanyu.github.io/sweetaste/img/item6.jpg" alt="" style="width: 100%;">
+                    <h3>img7</h3>
+                    <p>這是img7</p>
+                </div>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b" style="text-align: center;">
+            <a href="#home" data-theme="a" style="width: 200px;font-size: 14px;">首頁</a>
+        </div>
+    </div>
+    <!-- 彈跳視窗/聯絡資訊 -->
     <div data-role="page" id="about">
-        <div data-role="header">
+        <div data-role="header" class="dialog" style="padding: 10px;">
             頁首
         </div>
         <div data-role="content">
-            安安你好
-        </div>
-        <div data-role="footer">
-            頁尾
+           <p><a href="tel:+0800000123" data-theme="a">連絡電話:02-2223333</a></p>
         </div>
     </div>
+    <!-- js -->
+    <script>
+        // $(document).ready(執行內容);
+        //宣告(指定元素).ready=加載後執行
+
+        // $(document).ready(function(){
+        //     console.log('安安你好')
+        // })
+
+        // $().ready(function(){
+        //     console.log('安安你好二')
+        // })
+
+        // $(function(){
+        //     console.log('安安你好三')
+        //     setInterval(time,1000)
+        //     //(function,毫秒時間1S=1000) 此為設定時間內不斷執行指定function
+        // })
+        //   //ready只能使用當前檔案，因此無須選擇器，以上三種用法都是加載後執行
+
+        // function time(){
+        //     console.log('計時器二')
+        // }
+        let timeStop = setInterval(stop,5000)
+        let time =setInterval(ti,1000)
+        function ti(){
+            console.log('測試')
+        }
+
+        function stop(){
+            clearInterval(time)
+        }
+        //使計時器停止clearInterval(計時器變數) EX.原生JS即有計時器
+
+        
+
+      
+        
+
+        // setlnterval()計時器
+    </script>
 </body>
 </html>

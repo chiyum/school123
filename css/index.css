@@ -39,6 +39,15 @@
     font-size: 14px;
 }
 
+/* 聯絡資訊 */
+
 #about div{
     text-align: center;
 }
+
+/* 相簿 */
+
+#phtoId img{
+    width: 49%;
+}
+
