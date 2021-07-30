@@ -31,6 +31,10 @@
 <!-- data-transition="flip/pop/fade/turn/flow/slide"等 換頁效果-->
 
 <!-- data-position-to="width"畫面固定在正中央 -->
+
+<!-- data-position="fixed" data-fullscreen="ture"
+    隱藏header and footer 需要有第一個position後
+    fullscreen才有效果 -->
 <body>
     <div data-role="page" id="home">
         <div data-role="header" data-theme="b" class="header" data-position="fixed" data-fullscreen="ture">
@@ -40,9 +44,11 @@
         </div>
         <div data-role="main" class="content">
             <a href="#product" data-role="button" data-transition="flow">第二頁</a>
+            <a href="#buId" data-role="button" data-transition="flow">按鈕</a>
             <a href="#phtoId" data-role="button" data-transition="flow">相簿</a>
             <a href="#about" data-rel="dialog" data-role="button">視窗</a>
             <a href="#click" data-rel="popup" data-role="button">視窗二</a>
+            <a href="#music" data-role="button">音樂視窗</a>
                 <div id="click" data-role="popup">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Natus, minima nobis error placeat eos sequi fugiat
@@ -77,6 +83,7 @@
         <div data-role="header" class="header" data-theme="b" data-position="fixed" data-fullscreen="ture">
             <p>產品頁面</p>
             <a data-rel="back">返回</a>
+            <a href="#home">首頁</a>
         </div>
         <div data-role="content" class="content">
             <a href="#home" data-role="button" data-transition="flip">點我回首頁</a>
@@ -132,7 +139,7 @@
                     <p>這是img4</p>
                 </div>
             <a href="#img5" data-rel="popup" data-position-to="window">
-                <img src="https://icguanyu.github.io/sweetaste/img/item5.jpg" alt="img">
+                <img src="./img/pic1.png" alt="img">
                 </a>
                 <div data-role="popup" id="img5" data-dismissible="false">
                     <a href="#" data-rel="back" data-icon="delete" data-role="button" data-iconpos="notext" class="ui-btn-right" data-theme="b"></a>
@@ -160,7 +167,7 @@
                 </div>
         </div>
         <div data-role="footer" data-position="fixed" data-theme="b" style="text-align: center;">
-            <a href="#home" data-theme="a" style="width: 200px;font-size: 14px;">首頁</a>
+            <a href="#home" data-theme="a" style="width: 200px;font-size: 14px;border-radius: 10px;">首頁</a>
         </div>
     </div>
     <!-- 彈跳視窗/聯絡資訊 -->
@@ -170,6 +177,78 @@
         </div>
         <div data-role="content">
            <p><a href="tel:+0800000123" data-theme="a">連絡電話:02-2223333</a></p>
+        </div>
+    </div>
+    <!-- 按鈕 -->
+    <div data-role="page" id="buId" >
+        <div data-role="header" style="text-align: center;">
+            <p>頁首</p>
+            <div data-role="navbar" data-grid="b" data-iconpos="bottom">
+                <ul>
+                    <li><a href="#" data-icon="user" class="ui-btn-active">123</a></li>
+                    <li><a href="#" data-icon="star" class="ui-btn-active">123</a></li>
+                    <li><a href="#" data-icon="carat-r" class="ui-btn-active">123</a></li>
+                    <li><a href="#" data-icon="carat-r" class="ui-btn-active">123</a></li>
+                    <li><a href="#" data-icon="carat-r" class="ui-btn-active">123</a></li>
+                    <li><a href="#" data-icon="carat-r" class="ui-btn-active">123</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="main">
+            <a href="#" class="ui-btn  ui-btn-inline">1</a>
+            <a href="#" class="ui-btn  ui-btn-inline">2</a>
+            <a href="#" class="ui-btn  ui-btn-inline">3</a>
+            <a href="#" class="ui-btn  ui-btn-inline">4</a>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <!-- <div data-role="button" class="ui-bar">
+                <a href="#">123</a>
+                <a href="#">123</a>
+                <a href="#">123</a>
+                <a href="#">123</a>
+                <a href="#">123</a>
+            </div> -->
+            <!-- data-grid="b"按鈕換行 -->
+            <div data-role="navbar" data-grid="b">
+                <ul>
+                    <li><a href="#" data-icon="user">123</a></li>
+                    <li><a href="#" data-icon="star">123</a></li>
+                    <li><a href="#" data-icon="carat-r">123</a></li>
+                    <li><a href="#" data-icon="carat-r">123</a></li>
+                    <li><a href="#" data-icon="carat-r">123</a></li>
+                    <li><a href="#" data-icon="carat-r">123</a></li>
+                    <li><a href="#" data-icon="carat-r">123</a></li>
+                    <li><a href="#" data-icon="carat-r">123</a></li>
+                    <li><a href="#" data-icon="carat-d">123</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="music" data-role="page" style="background: #555151;">
+        <div data-role="header" data-theme="b" style="text-align: center;">
+            <a href="#" data-rel="back">
+                返回
+            </a>
+            <p>
+                音樂撥放器
+            </p>
+        </div>
+        <div data-role="main" data-theme="b" >
+            <a href="#" data-role="button" data-theme="b">noair</a>
+            <a href="#" data-role="button" data-theme="b">
+                <img src="data:image/jpeg;base64,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" alt="" style="width: 80%;">
+            </a>
+            <a href="#" data-role="button" data-theme="b">jordin sparks</a>
+            <a href="#" data-role="button" data-theme="b">no air</a>
+            <div  data-role="controlgroup" data-type="horizontal">
+                <a href="#" data-role="button" data-theme="b">播放</a>
+                <a href="#" data-role="button" data-theme="b">前進</a>
+                <a href="#" data-role="button" data-theme="b">倒帶</a>
+                <a href="#" data-role="button" data-theme="b">暫停</a>
+            </div>
+        </div>
+        <div data-role="footer" data-theme="b" data-position="fixed" style="text-align: center;">
+            暫無歌詞
         </div>
     </div>
     <!-- js -->
